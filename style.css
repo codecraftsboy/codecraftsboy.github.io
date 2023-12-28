@@ -16,7 +16,7 @@
 
 .container {
     background: var(--bg-color);
-    height: 180vh;
+    height: 100vh;
     padding: 1rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -109,7 +109,7 @@
 .para:hover {
     cursor: default;
 }
-
+/* 
 @media screen and (max-width:1894px) {
     .container{
         grid-template-rows: .20fr 1.1fr 1fr;   
@@ -126,83 +126,127 @@
     .container{
         grid-template-rows: .20fr .80fr 1fr;   
     }
-}
+} 
 
 @media screen and (max-width:400px) {
     .container{
         grid-template-columns: 1fr;   
+        grid-template-rows: 5rem 10rem 4rem 4rem 15rem 35rem ;
+        grid-template-areas: "descifrador"
+        "logo"
+        "gif"
+        "code"
+        "para"
+        "bagde";
+    }
+}
+
+@media screen and (max-width:400px) {
+    .container{
+        grid-template-rows: 5rem 10rem 29rem 4rem 15rem 35rem ;
+        
+    }
+} */
+ 
+@media screen and (max-width:550px) {
+    .container{
+        
+        grid-template-rows: 5rem 10rem 15rem 4rem 15rem 35rem ;
+        
+    }
+}
+
+@media screen and (max-width:550px) {
+    .container{
+        grid-template-columns: 1fr;   
+        grid-template-rows: 5rem 10rem 15rem 4rem 15rem 35rem ;
+        grid-template-areas: "descifrador"
+        "logo"
+        "gif"
+        "code"
+        "para"
+        "bagde";
+    }
+}
+
+@media screen and (max-width:400px) {
+    .container{
+        
         grid-template-rows: 5rem 10rem 11rem 4rem 15rem 35rem ;
-        grid-template-areas: "descifrador"
-        "logo"
-        "gif"
-        "code"
-        "para"
-        "bagde";
+        height: 220vh;
+        
     }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:380px) {
     .container{
-        /* grid-template-columns: 1fr;    */
-        grid-template-rows: 5rem 10rem 10rem 4rem 15rem 35rem ;
-        /* grid-template-areas: "descifrador"
-        "logo"
-        "gif"
-        "code"
-        "para"
-        "bagde"; */
+        
+        grid-template-rows: 4rem 10rem 10.2rem 4rem 15rem 35rem ;
+        
     }
-}
+}   
 
-@media screen and (max-width:550px) {
+@media screen and (max-width:360px) {
     .container{
-        /* grid-template-columns: 1fr;    */
-        grid-template-rows: 5rem 10rem 15rem 4rem 15rem 35rem ;
-        /* grid-template-areas: "descifrador"
-        "logo"
-        "gif"
-        "code"
-        "para"
-        "bagde"; */
+        
+        grid-template-rows: 4rem 10rem 10.2rem 4rem 15rem 35rem ;
+        
     }
-}
+}   
 
-@media screen and (max-width:550px) {
+@media screen and (max-width:350px) {
     .container{
-        grid-template-columns: 1fr;   
-        grid-template-rows: 5rem 10rem 15rem 4rem 15rem 35rem ;
-        grid-template-areas: "descifrador"
-        "logo"
-        "gif"
-        "code"
-        "para"
-        "bagde";
+        
+        grid-template-rows: 4rem 10rem 10.2rem 4rem 15rem 35rem ;
+        
     }
-}
+}   
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:335px) {
     .container{
-        /* grid-template-columns: 1fr;    */
-        grid-template-rows: 5rem 10rem 13rem 4rem 15rem 35rem ;
-        /* grid-template-areas: "descifrador"
-        "logo"
-        "gif"
-        "code"
-        "para"
-        "bagde"; */
+        
+        grid-template-rows: 4rem 10rem 9.7rem 4rem 15rem 35rem ;
+        
     }
-}
+}   
 
-@media screen and (max-width:420px) {
+@media screen and (max-width:320px) {
     .container{
-        /* grid-template-columns: 1fr;    */
-        grid-template-rows: 4rem 10rem 12rem 4rem 15rem 35rem ;
-        /* grid-template-areas: "descifrador"
-        "logo"
-        "gif"
-        "code"
-        "para"
-        "bagde"; */
+        
+        grid-template-rows: 4rem 10rem 9.5rem 4rem 15rem 35rem ;
+        
     }
-}
+}   
+
+@media screen and (max-width:300px) {
+    .container{
+        
+        grid-template-rows: 4rem 10rem 8.7rem 4rem 15rem 35rem ;
+        
+    }
+}   
+
+@media screen and (max-width:280px) {
+    .container{
+        
+        grid-template-rows: 4rem 10rem 8.2rem 4rem 15rem 35rem ;
+        
+    }
+}   
+
+@media screen and (max-width:260px) {
+    .container{
+        
+        grid-template-rows: 4rem 10rem 7.8rem 4rem 15rem 35rem ;
+        
+    }
+}   
+
+@media screen and (max-width:242px) {
+    .container{
+        
+        grid-template-rows: 4rem 10rem 7.1rem 4rem 15rem 35rem ;
+        
+    }
+}   
 
