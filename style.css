@@ -47,6 +47,11 @@
     grid-area: gif;
     display: grid;
     place-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    max-width: 25rem;
+    /* align-self: center; */
 }
 
 .fa-duotone {
@@ -68,7 +73,9 @@
 
 .gif img {
     border-radius: 1rem;
-    width: 93%;
+    width: 100%;
+    /* height: 100%; */
+    /* object-fit: scale-down; */
 }
 
 .bagde {
@@ -169,11 +176,11 @@
     }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:500px) {
     .container{
         
         grid-template-rows: 5rem 10rem 11rem 4rem 15rem 35rem ;
-        height: 220vh;
+        height: 290vh;
         
     }
 }
