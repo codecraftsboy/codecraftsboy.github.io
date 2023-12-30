@@ -1,12 +1,3 @@
-:root {
-    --bg-color: #ecf0f3;
-    --main-color: #ccc;
-    --bright-color: #fff;
-    --font-color: #555;
-    --box-shadow: 0.4rem .4rem 1rem #ccc, -.4rem -.4rem 1rem #fff;
-    --box-shadow-inset: inset 0.4rem .4rem 1rem #ccc, inset -.4rem -.4rem 1rem #fff;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -14,246 +5,163 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #F8F0E5;
+    /* color: #D2E3C8; */
+}
+
 .container {
-    background: var(--bg-color);
-    height: 100vh;
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 0.3fr 1fr 1fr;
-    gap: 1rem;
-    grid-template-areas: "descifrador descifrador descifrador descifrador"
-    "logo gif gif bagde"
-    "code code para bagde";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2.5rem;
+    min-height: fit-content;
+    max-width: fit-content;
+    /* position: relative; */
+    /* left: 2rem; */
+    /* right: -2rem; */
 }
 
-.logo {
-    box-shadow: var(--box-shadow-inset);
-    grid-area: logo;
-    border-radius: 1rem;
-}
-
-
-.descifrador {
-    box-shadow: var(--box-shadow-inset);
-    border-radius: 1rem;
-    grid-area: descifrador;
-}
-
-
-.gif {
-    box-shadow: var(--box-shadow-inset);
-    border-radius: 1rem;
-    grid-area: gif;
-    display: grid;
-    place-items: center;
-    width: fit-content;
-    height: fit-content;
-    padding: 1rem;
-    max-width: 25rem;
-    /* align-self: center; */
-}
-
-.fa-duotone {
-    font-size: 8rem;
-    color: var(--font-color);
-}
-
-.all {
-    display: grid;
-    place-items: center;
+.card {
+    position: relative;
+    width: 20rem;
+    height: 28.125rem;
+    margin: 1.875rem;
+    background: #287bff;
+    border-radius: 1.25rem;
+    border-bottom-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    box-shadow: 0 0.938rem 0 #0F2C59;
+    inset: 0 -0.938rem 0 rgba(255,255,255,0.25), 0 2.813rem 0 rgba(0,0,0,0.15);
     overflow: hidden;
-}
-
-.code, .descifrador {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
-.gif img {
-    border-radius: 1rem;
+.card::before {
+    content: '';
+    position: absolute;
+    top: -8.75rem;
+    left: -40%;
     width: 100%;
-    /* height: 100%; */
-    /* object-fit: scale-down; */
+    height: 120%;
+    background: linear-gradient(90deg,transparent,rgba(255,255,255,0.25));
+    transform: rotate(35deg);
+    pointer-events: none;
+    filter: blur(0.313rem);
+    
 }
 
-.bagde {
-    border-radius: 1rem;
-    box-shadow: var(--box-shadow-inset);
-    grid-area: bagde;
+.card:nth-child(1) {
+    background-image: linear-gradient(to bottom, #EADBC8, #DAC0A3);
+    animation: bgAnimatedGradient 1s infinite;
+    background-size: 250% 250%;
 }
 
-.code {
-    box-shadow: var(--box-shadow-inset);
-    border-radius: 1rem;
-    grid-area: code;
+.icon {
+    color: #0F2C59;
+    font-size: 5em;
 }
 
-.para {
-    border-radius: 1rem;
-    box-shadow: var(--box-shadow-inset);
-    grid-area: para;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
-    padding: 2rem;
-    color: var(--font-color);
+@keyframes bgAnimatedGradient{
+    0%{
+        background-position: 0 85%;
+    }
+    50%{
+        background-position: 100% 20%;
+    }
+    100%{
+        background-position: 0% 85%;
+    }
 }
 
-.bagde {
+
+.card:nth-child(2) {
+}
+
+.card:nth-child(3) {
+    background-image: linear-gradient(to bottom, grey, black);
+    background: linear-gradient(to bottom, #24ff72, #9a4eff);
+}
+
+.icon {
+    position: relative;
+    width: 8.75rem;
+    height: 7.5rem;
+    background: #F8F0E5;
+    border-bottom-left-radius: 6.25rem;
+    border-bottom-right-radius: 6.25rem;
+    box-shadow: 0 0.625rem 0 #F8F0E5);
+    inset: 0 -.3.125rem 0 #fff;
+    z-index: 1000;
     display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    justify-content: space-around;
-    color: var(--font-color);
-}
-.bagde:hover {
-    cursor: default;
+    justify-content: center;
 }
 
-.para:hover {
-    cursor: default;
-}
-/* 
-@media screen and (max-width:1894px) {
-    .container{
-        grid-template-rows: .20fr 1.1fr 1fr;   
-    }
-}
-
-@media screen and (max-width:1723px) {
-    .container{
-        grid-template-rows: .20fr .95fr 1fr;   
-    }
+.icon::before {
+    content: '';
+    position: absolute;
+    left: -3.125rem;
+    top: 0;
+    width: 3.125rem;
+    height: 3.125rem;
+    background: transparent;
+    border-top-right-radius: 3.125rem;
+    box-shadow: 0.938rem -0.938rem 0 0.938rem #F8F0E5;
 }
 
-@media screen and (max-width:1560px) {
-    .container{
-        grid-template-rows: .20fr .80fr 1fr;   
-    }
-} 
-
-@media screen and (max-width:400px) {
-    .container{
-        grid-template-columns: 1fr;   
-        grid-template-rows: 5rem 10rem 4rem 4rem 15rem 35rem ;
-        grid-template-areas: "descifrador"
-        "logo"
-        "gif"
-        "code"
-        "para"
-        "bagde";
-    }
+.icon::after {
+    content: '';
+    position: absolute;
+    right: -3.125rem;
+    top: 0;
+    width: 3.125rem;
+    height: 3.125rem;
+    background: transparent;
+    border-top-left-radius: 3.125rem;
+    box-shadow: -0.938rem -0.938rem 0 0.938rem #F8F0E5;
 }
 
-@media screen and (max-width:400px) {
-    .container{
-        grid-template-rows: 5rem 10rem 29rem 4rem 15rem 35rem ;
-        
-    }
-} */
- 
-@media screen and (max-width:550px) {
-    .container{
-        
-        grid-template-rows: 5rem 10rem 15rem 4rem 15rem 35rem ;
-        
-    }
+.icon ion-icon {
+    color: #0F2C59;
+    position: relative;
+    font-size: 6em;
+    z-index: 10000;
+    --ionicon-stroke-width: 1.5rem;
 }
 
-@media screen and (max-width:550px) {
-    .container{
-        grid-template-columns: 1fr;   
-        grid-template-rows: 5rem 10rem 15rem 4rem 15rem 35rem ;
-        grid-template-areas: "descifrador"
-        "logo"
-        "gif"
-        "code"
-        "para"
-        "bagde";
-    }
+.content {
+    position: absolute;
+    width: 100%;
+    padding: 1.875rem;
+    padding-top: 8.75rem;
+    text-align: center;
 }
 
-@media screen and (max-width:500px) {
-    .container{
-        
-        grid-template-rows: 5rem 10rem 11rem 4rem 15rem 35rem ;
-        height: 290vh;
-        
-    }
+.content h2 {
+    font-size: 1.75em;
+    color: #0F2C59;
+    margin-bottom: 0.625rem;
 }
 
-@media screen and (max-width:380px) {
-    .container{
-        
-        grid-template-rows: 4rem 10rem 10.2rem 4rem 15rem 35rem ;
-        
-    }
-}   
+.content p {
+    color: #0F2C59;
+    line-height: 1.5em;
+}
 
-@media screen and (max-width:360px) {
-    .container{
-        
-        grid-template-rows: 4rem 10rem 10.2rem 4rem 15rem 35rem ;
-        
-    }
-}   
+img {
+    height: 6.563rem;
+    border-radius: 3.125rem;
+    position: relative;
+    z-index: 10000;
+}
 
-@media screen and (max-width:350px) {
-    .container{
-        
-        grid-template-rows: 4rem 10rem 10.2rem 4rem 15rem 35rem ;
-        
-    }
-}   
-
-@media screen and (max-width:335px) {
-    .container{
-        
-        grid-template-rows: 4rem 10rem 9.7rem 4rem 15rem 35rem ;
-        
-    }
-}   
-
-@media screen and (max-width:320px) {
-    .container{
-        
-        grid-template-rows: 4rem 10rem 9.5rem 4rem 15rem 35rem ;
-        
-    }
-}   
-
-@media screen and (max-width:300px) {
-    .container{
-        
-        grid-template-rows: 4rem 10rem 8.7rem 4rem 15rem 35rem ;
-        
-    }
-}   
-
-@media screen and (max-width:280px) {
-    .container{
-        
-        grid-template-rows: 4rem 10rem 8.2rem 4rem 15rem 35rem ;
-        
-    }
-}   
-
-@media screen and (max-width:260px) {
-    .container{
-        
-        grid-template-rows: 4rem 10rem 7.8rem 4rem 15rem 35rem ;
-        
-    }
-}   
-
-@media screen and (max-width:242px) {
-    .container{
-        
-        grid-template-rows: 4rem 10rem 7.1rem 4rem 15rem 35rem ;
-        
-    }
-}   
-
+h4 {
+    color: goldenrod;
+}
